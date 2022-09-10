@@ -7,6 +7,7 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
+import { Customer } from '../models/custumer.model';
 
 @Controller('v1/customers')
 export class CustomerController {
@@ -16,17 +17,17 @@ export class CustomerController {
   }
 
   @Get(':document')
-  getById(@Param('document') document) {
+  getById(@Param('document') document: string) {
     return 'Obter o cliente ' + document;
   }
 
   @Post()
-  post(@Body() body) {
+  post(@Body() body: Customer) {
     return body;
   }
 
   @Put(':document')
-  put(@Param('document') document, @Body() body) {
+  put(@Param('document') document: string, @Body() body: Customer) {
     return {
       customer: document,
       data: body,
@@ -34,7 +35,7 @@ export class CustomerController {
   }
 
   @Delete(':document')
-  delete(@Param('document') document) {
+  delete(@Param('document') document: string) {
     return 'Remover o cliente ' + document;
   }
 }
