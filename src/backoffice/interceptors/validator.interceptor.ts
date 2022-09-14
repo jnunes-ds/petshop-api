@@ -7,7 +7,7 @@ import {
 } from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { Contract } from '../contracts/contract';
-import { Result } from '../models/result.models';
+import { Result } from '../models/result.model';
 
 @Injectable()
 export class ValidatorInterceptor implements NestInterceptor {

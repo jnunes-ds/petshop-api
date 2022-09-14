@@ -9,7 +9,7 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { Customer } from '../models/custumer.model';
-import { Result } from '../models/result.models';
+import { Result } from '../models/result.model';
 import { ValidatorInterceptor } from '../interceptors/validator.interceptor';
 import { CreateCustomerContract } from '../contracts/customer.contracts';
 
